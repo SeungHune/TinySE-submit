@@ -13,6 +13,8 @@ import org.junit.Test;
  
 import edu.hanyang.submit.TinySETokenizer;
 
+
+@Ignore("Delete this line to unit test stage 4")
 public class TokenizerTest {
 	static List<String[]> results;
 	static List<String> testSentences;

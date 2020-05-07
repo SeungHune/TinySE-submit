@@ -11,7 +11,9 @@ import java.util.Collections;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.core.SimpleAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
+import org.junit.Ignore;
 import org.tartarus.snowball.ext.PorterStemmer;
+
 
 public class TinySETokenizer implements Tokenizer {
 	private SimpleAnalyzer analyzer;
@@ -24,6 +26,7 @@ public class TinySETokenizer implements Tokenizer {
 
 	public List<String> split(String text) {
 		ArrayList<String> mylist = new ArrayList<>();
+		ArrayList<String> mylist2 = new ArrayList<>();
 		try {
 			TokenStream stream = analyzer.tokenStream(null, new StringReader(text));
 			stream.reset();
@@ -38,7 +41,7 @@ public class TinySETokenizer implements Tokenizer {
 		}catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		return mylist;
+		return mylist2;
 	}
 
 	public void clean() {
