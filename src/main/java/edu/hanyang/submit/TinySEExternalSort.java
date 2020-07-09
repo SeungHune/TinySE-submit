@@ -75,8 +75,8 @@ public class TinySEExternalSort implements ExternalSort {
 		int pass_cnt = 1;
 		int run_control = 70;
 		while(input.available() != 0){
-			if( input.available() > nblocks * run_control * (Integer.SIZE/Byte.SIZE) * 3  ) {
-				while (runs.size() < nblocks * run_control){
+			if( input.available() > nblocks * blocksize * (Integer.SIZE/Byte.SIZE) * 3  ) {
+				while (runs.size() < nblocks * blocksize){
 					word_id = input.readInt();
 					doc_id = input.readInt();
 					pos = input.readInt();

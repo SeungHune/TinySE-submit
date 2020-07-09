@@ -14,7 +14,7 @@ import org.junit.Test;
 import edu.hanyang.submit.TinySEExternalSort;
 
 
-//@Ignore("Delete this line to unit test stage 4")
+@Ignore("Delete this line to unit test stage 4")
 public class ExternalSortTest {
 	
 	@Before
@@ -29,7 +29,7 @@ public class ExternalSortTest {
 	@Test
 	public void TestSort() throws IOException {
 		int blocksize = 1024*8;
-		int nblocks = 1000;
+		int nblocks = 2000;
 		ClassLoader classLoader = this.getClass().getClassLoader();
 //		File infile = new File(classLoader.getResource("test.data").getFile());
 		File infile = new File(classLoader.getResource("test-10000000.data").getFile());
